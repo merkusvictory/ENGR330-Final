@@ -30,12 +30,6 @@ while True:
         try:
             if int(keys[0]) >= 0:
                 loc_graph(int(keys[0]), keys[1])
-                if button_a.was_pressed():
-                    display.clear()
-                    sleep(100)
-                    display.scroll(msg)
-                    sleep(100)
-                    display.clear()
             msg = None
         except:
             pass
