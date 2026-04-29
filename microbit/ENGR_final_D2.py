@@ -1,6 +1,7 @@
 from microbit import *
 import radio
 from arrow_point import *
+from location_graph import *
 
 radio.on()
 radio.config(channel=17)
@@ -43,6 +44,7 @@ while True:
         msg = msg_bytes.decode('utf-8').strip()
         radio.send(msg)
         keys = msg.split(',')
+        loc_graph(int(keys[0]), keys[1])
         arrow_point(int(keys[0]), keys[1])
         sleep(100)
 
