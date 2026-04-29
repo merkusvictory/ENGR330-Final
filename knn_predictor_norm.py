@@ -25,7 +25,7 @@ X = df[['A', 'B', 'C']]
 y = df['grid_loc']
 
 # Train KNN
-knn = KNeighborsClassifier(n_neighbors=5) # this is the k parameter that we can tune
+knn = KNeighborsClassifier(n_neighbors=15) # this is the k parameter that we can tune
 knn.fit(X, y)
 print("Model Trained Successfully!")
 
